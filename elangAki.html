@@ -11,13 +11,13 @@
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Default: teks putih saat transparan */
+    /* Warna teks default (di atas, transparan) */
     #navbar .nav-link,
     #navbar .logo-text {
       color: white;
     }
 
-    /* Saat di-scroll: latar putih, teks hitam */
+    /* Saat di-scroll */
     #navbar.scrolled {
       background-color: white;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -29,21 +29,20 @@
       color: black;
     }
 
-    /* Logo tetap terlihat */
+    /* Pastikan logo tetap terlihat */
     #navbar img {
       filter: none;
     }
   </style>
 </head>
 <body class="font-primary">
-
   <!-- Navbar (fixed) -->
   <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
     <nav aria-label="Global" class="flex items-center justify-between p-4 sm:p-6 lg:px-8 max-w-7xl mx-auto">
       <div class="flex lg:flex-1">
         <a href="#hero" class="-m-1.5 p-1.5 logo-text">
-          <span class="sr-only">Elang Aki Kepanjen</span>
-          <img src="src/asset/elangkepanjen.png" alt="Elang Aki Kepanjen Logo" class="h-16 sm:h-20 w-auto" />
+          <span class="sr-only">Elang Aki</span>
+          <img src="src/asset/elangaki.png" alt="Elang Aki Logo" class="h-16 sm:h-20 w-auto" />
         </a>
       </div>
       <div class="flex lg:hidden bg-primary p-3 rounded-2xl">
@@ -62,7 +61,7 @@
         <a href="#alamat" class="nav-link text-lg font-semibold">Alamat</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a target="_blank" href="https://wa.me/+6281318725725" class="cta-button text-lg font-semibold bg-primary text-black px-5 py-2.5 rounded-full">
+        <a target="_blank" href="https://wa.me/+6285109125125" class="cta-button text-lg font-semibold bg-primary px-5 py-2.5 rounded-full">
           Pesan Sekarang
         </a>
       </div>
@@ -74,8 +73,8 @@
         <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-4 sm:p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
             <a href="#hero" class="-m-1.5 p-1.5">
-              <span class="sr-only">Elang Aki Kepanjen</span>
-              <img src="src/asset/elangkepanjen.png" alt="Elang Aki Kepanjen Logo" class="h-8 w-auto" />
+              <span class="sr-only">Elang Aki</span>
+              <img src="src/asset/elangaki.png" alt="Elang Aki Logo" class="h-8 w-auto" />
             </a>
             <button type="button" id="close-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
               <span class="sr-only">Close menu</span>
@@ -94,7 +93,7 @@
                 <a href="#alamat" class="mobile-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Alamat</a>
               </div>
               <div class="py-6">
-                <a target="_blank" href="https://wa.me/+6281318725725" class="mobile-link -mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Pesan Sekarang</a>
+                <a target="_blank" href="https://wa.me/+6285109125125" class="mobile-link -mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Pesan Sekarang</a>
               </div>
             </div>
           </div>
@@ -103,7 +102,7 @@
     </dialog>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section id="hero" class="relative isolate overflow-hidden pt-28 sm:pt-32 pb-20">
     <img src="/src/asset/bg-hero.png" alt="" class="absolute inset-0 -z-10 size-full object-cover" />
     <div class="absolute inset-0 bg-black opacity-60 -z-5"></div>
@@ -111,13 +110,13 @@
       <div class="max-w-7xl px-4 sm:px-6 py-12 sm:py-20 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
           <h1 class="mt-10 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-pretty text-primary">
-            Elang Aki Kepanjen
+            Elang Aki Malang
           </h1>
           <p class="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-pretty text-white">
             Outlet AKI Bergaransi.<br class="hidden sm:block">Melayani Antar AKI,<br class="hidden md:block">Pasang AKI Ke Tempat Anda
           </p>
           <div class="mt-8 sm:mt-10 flex items-center gap-x-4 sm:gap-x-6">
-            <a target="_blank" href="https://wa.me/+6281318725725" class="cta-button text-base sm:text-lg font-semibold bg-primary text-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-full">
+            <a target="_blank" href="https://wa.me/+6285109125125" class="cta-button text-base sm:text-lg font-semibold bg-primary text-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-full">
               Pesan Sekarang
             </a>
           </div>
@@ -125,7 +124,7 @@
         <div class="mt-12 sm:mt-16 md:mt-20 lg:mt-0 lg:shrink-0 lg:grow flex lg:justify-end justify-center">
           <div class="bg-primary w-full max-w-[415px] pb-3 pt-5 rounded-xl rounded-br-none">
             <img class="w-full h-auto -mt-10 -ml-5 rounded-tl-[50px] rounded-br-[50px] rounded-tr-xl rounded-bl-xl"
-              src="src/asset/herokepanjen.png" alt="Hero">
+              src="src/asset/hero.png" alt="Hero">
           </div>
         </div>
       </div>
@@ -144,7 +143,7 @@
             Tentang <span class="bg-primary px-1">Elang AKI</span>
           </h1>
           <p class="text-lg sm:text-xl text-justify leading-relaxed">
-            Elang Aki Kepanjen Fokus Melayani Kebutuhan AKI Retail, Perorangan, Perusahaan Punya Armada dan Bengkel. Kami
+            Elang Aki Malang Fokus Melayani Kebutuhan AKI Retail, Perorangan, Perusahaan Punya Armada dan Bengkel. Kami
             Menyediakan Segala Jenis dan Tipe, AKI Mobil, AKI Motor, VRLA, AKI Basah, AKI MF, dan Segala Peralatan AKI.
           </p>
         </div>
@@ -161,7 +160,7 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-8 sm:gap-y-12 lg:gap-y-14 max-w-4xl mx-auto mt-12 sm:mt-16 lg:mt-20">
       <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-border border">
-        <img src="src/asset/antar.png" alt="Layanan Antar AKI" class="w-full h-96 lg:h-[500px] object-cover">
+        <img src="src/asset/antar-aki.png" alt="Layanan Antar AKI" class="w-full h-96 lg:h-[500px] object-cover">
         <div class="p-4 sm:p-6">
           <h3 class="text-xl sm:text-2xl font-semibold text-black mb-3 sm:mb-4">Layanan Antar AKI</h3>
           <p class="text-sm sm:text-base text-justify text-gray-700 leading-relaxed">
@@ -170,7 +169,7 @@
         </div>
       </div>
       <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-border border">
-        <img src="src/asset/pasang.png" alt="Layanan Antar Pasang" class="w-full h-96 lg:h-[500px] object-cover">
+        <img src="src/asset/antar-pasang.png" alt="Layanan Antar Pasang" class="w-full h-96 lg:h-[500px] object-cover">
         <div class="p-4 sm:p-6">
           <h3 class="text-xl sm:text-2xl font-semibold text-black mb-3 sm:mb-4">Layanan Antar Pasang</h3>
           <p class="text-sm sm:text-base text-justify text-gray-700 leading-relaxed">
@@ -179,7 +178,7 @@
         </div>
       </div>
       <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-border border">
-        <img src="src/asset/pengecekanaki.png" alt="Layanan Pengecekan Plus" class="w-full h-96 lg:h-[500px] object-cover">
+        <img src="src/asset/pengecekan.png" alt="Layanan Pengecekan Plus" class="w-full h-96 lg:h-[500px] object-cover">
         <div class="p-4 sm:p-6">
           <h3 class="text-xl sm:text-2xl font-semibold text-black mb-3 sm:mb-4">Layanan Pengecekan Plus</h3>
           <p class="text-sm sm:text-base text-justify text-gray-700 leading-relaxed">
@@ -188,7 +187,7 @@
         </div>
       </div>
       <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-border border">
-        <img src="src/asset/garansi.png" alt="Bergaransi" class="w-full h-96 lg:h-[500px] object-cover">
+        <img src="src/asset/bergaransi.png" alt="Bergaransi" class="w-full h-96 lg:h-[500px] object-cover">
         <div class="p-4 sm:p-6">
           <h3 class="text-xl sm:text-2xl font-semibold text-black mb-3 sm:mb-4">Bergaransi</h3>
           <p class="text-sm sm:text-base text-justify text-gray-700 leading-relaxed">
@@ -201,7 +200,7 @@
 
   <!-- CTA -->
   <section class="bg-black w-full flex justify-center items-center my-12 sm:my-16 lg:my-20 py-5 sm:py-8">
-    <img class="h-32 sm:h-40 w-auto" src="src/asset/elangakikepanjen.png" alt="Elang Aki Kepanjen Logo">
+    <img class="h-32 sm:h-40 w-auto" src="src/asset/elangaki.png" alt="Elang Aki Logo">
   </section>
 
   <!-- Testimonial -->
@@ -213,14 +212,15 @@
     </div>
     <div class="bg-black rounded-[40px] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col md:flex-row gap-6 sm:gap-8 md:rounded-br-[150px]">
       <div class="w-full md:w-1/3 flex-shrink-0">
-        <img src="src/asset/dany.png" alt="Pak Dany - Kepanjen" class="w-full h-auto rounded-2xl">
+        <img src="src/asset/testi.png" alt="Pak Desmon - Malang" class="w-full h-auto rounded-2xl">
       </div>
       <div class="w-full md:w-2/3 text-white flex flex-col justify-between py-3">
         <p class="text-base sm:text-lg md:text-xl font-semibold leading-relaxed">
-          "Bagi saya, toko aki ini adalah solusi lengkap. Mereka menyediakan pengecekan gratis untuk memastikan aki masih layak pakai atau tidak. Jika perlu ganti, ada layanan antar pasang ke rumah atau lokasi kendaraan, jadi tidak perlu khawatir mogok di jalan. Semua dikerjakan dengan cepat, rapi, dan menggunakan aki yang kualitasnya terjamin. Dengan layanan seperti ini, saya merasa lebih aman dan nyaman saat berkendara”.
+          “Saya mengenal aki malang dari referensi teman saya yang sudah menjadi langganan sebelumnya.
+          Beli Aki di tempat ini terpercaya, kendaraannya juga di cek kelistrikannya dan juga berkesempatan dapat hadiah”.
         </p>
         <h3 class="text-primary text-xl sm:text-2xl md:text-3xl font-bold mt-4 sm:mt-6 md:mt-8">
-          Pak Dany - Kepanjen
+          Pak Desmon - Malang
         </h3>
       </div>
     </div>
@@ -236,24 +236,24 @@
     <div class="w-full max-w-7xl mx-auto">
       <div class="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[600px] rounded-lg overflow-hidden">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.281832884076!2d112.56703837476971!3d-8.130957691898821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789f53c2f612db%3A0x651cbd13e705834a!2sTOKO%20ELANG%20AKI%20KEPANJEN.%20OUTLET%20AKI%20BERGARANSI!5e1!3m2!1sid!2sid!4v1764741993923!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.85898623971!2d112.63965067476792!3d-7.960717692063978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6290b555d4d09%3A0x604ca98a7ccf008e!2sTOKO%20ELANG%20AKI%20MALANG.OUTLET%20AKI%20BERGARANSI!5e1!3m2!1sid!2sid!4v1764153967716!5m2!1sid!2sid"
           width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-12 items-start mt-12 sm:mt-16 lg:mt-20">
         <div class="text-white order-2 md:order-1 text-center md:text-left">
-          <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Toko Elang AKI Kepanjen</h3>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Toko Elang AKI Malang</h3>
           <p class="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
-            Jl. Ahmad Yani No.71 Kepanjen, Kec. Kepanjen,<br>
-            Kabupaten Malang, Jawa Timur 65163
+            Jl. Tumenggung Suryo No.76 B, Purwantoro,<br>
+            Kec. Blimbing, Kota Malang, Jawa Timur 65111
           </p>
           <div class="space-y-2 sm:space-y-3">
-            <a target="_blank" href="https://wa.me/+6281318725725" class="text-lg mb-1">081 318 725 725</a>
-            <p class="text-lg">elangakikepanjen@gmail.com</p>
+            <a target="_blank" href="https://wa.me/+6285109125125" class="text-lg mb-1">0851-0912-5125</a>
+            <p class="text-lg">elangakimalang@gmail.com</p>
           </div>
         </div>
         <div class="flex justify-center md:justify-end order-1 md:order-2">
-          <img src="src/asset/elangakikepanjen.png" alt="Elang Aki Kepanjen Logo" class="w-full max-w-xs sm:max-w-sm h-auto">
+          <img src="src/asset/elangaki.png" alt="Elang Aki Logo" class="w-full max-w-xs sm:max-w-sm h-auto">
         </div>
       </div>
     </div>
@@ -285,14 +285,14 @@
 
   <!-- JavaScript -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       const navbar = document.getElementById('navbar');
       const heroSection = document.getElementById('hero');
       const burgerBtn = document.getElementById('burger-menu-toggle');
       const closeBtn = document.getElementById('close-menu');
       const modal = document.getElementById('mobile-menu');
 
-      // Handle navbar color on scroll
+      // Scroll handler untuk navbar
       function handleScroll() {
         if (!heroSection) return;
         const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
@@ -304,7 +304,7 @@
       }
 
       window.addEventListener('scroll', handleScroll);
-      handleScroll(); // Initial check
+      handleScroll(); // Init state
 
       // Mobile menu toggle
       if (burgerBtn) {
@@ -314,7 +314,7 @@
         closeBtn.addEventListener('click', () => modal.close());
       }
 
-      // Smooth scroll for all anchor links
+      // Smooth scroll & close modal
       const allLinks = document.querySelectorAll('a[href^="#"]');
       allLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -323,7 +323,7 @@
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
             if (modal.open) modal.close();
-            const offsetTop = targetElement.offsetTop - 100; // adjust offset as needed
+            const offsetTop = targetElement.offsetTop - 100; // adjust as needed
             window.scrollTo({
               top: offsetTop,
               behavior: 'smooth'
