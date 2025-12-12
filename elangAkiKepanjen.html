@@ -77,7 +77,7 @@
               <span class="sr-only">Elang Aki Kepanjen</span>
               <img src="src/asset/elangkepanjen.png" alt="Elang Aki Kepanjen Logo" class="h-8 w-auto" />
             </a>
-            <button type="button" id="close-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <button type="button" id="close-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700 cursor-pointer">
               <span class="sr-only">Close menu</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
                 <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
@@ -288,6 +288,12 @@
     </div>
   </footer>
 
+  <button id="back-to-top" class="fixed bottom-6 right-6 hidden bg-white rounded-full border border-gray-400 p-3 shadow-lg z-40 hover:shadow-xl transition-shadow focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer" title="Kembali ke atas">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-600">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v16.5" />
+    </svg>
+  </button>
+
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -296,8 +302,9 @@
       const burgerBtn = document.getElementById('burger-menu-toggle');
       const closeBtn = document.getElementById('close-menu');
       const modal = document.getElementById('mobile-menu');
+      const backToTopBtn = document.getElementById('back-to-top');
 
-      // Handle navbar color on scroll
+      // Handle navbar color and back-to-top on scroll
       function handleScroll() {
         if (!heroSection) return;
         const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
@@ -306,10 +313,30 @@
         } else {
           navbar.classList.remove('scrolled');
         }
+
+        // Back to top visibility
+        if (backToTopBtn && heroSection) {
+          const rect = heroSection.getBoundingClientRect();
+          if (rect.bottom < 0) {
+            backToTopBtn.classList.remove('hidden');
+          } else {
+            backToTopBtn.classList.add('hidden');
+          }
+        }
       }
 
       window.addEventListener('scroll', handleScroll);
       handleScroll(); // Initial check
+
+      // Back to top click
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
 
       // Mobile menu toggle
       if (burgerBtn) {

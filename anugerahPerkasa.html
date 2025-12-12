@@ -19,7 +19,7 @@
             </div>
             <div class="flex lg:hidden bg-anugerah p-3 rounded-2xl">
                 <button id="burger-menu-toggle" type="button"
-                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white cursor-pointer">
                     <span class="sr-only">Open main menu</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
                         aria-hidden="true" class="size-6">
@@ -52,7 +52,7 @@
                                 class="h-8 w-auto" />
                         </a>
                         <button type="button" id="close-menu"
-                            class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                            class="-m-2.5 rounded-md p-2.5 text-gray-700 cursor-pointer">
                             <span class="sr-only">Close menu</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
                                 aria-hidden="true" class="size-6">
@@ -274,12 +274,20 @@
         </div>
     </footer>
 
+    <button id="back-to-top" class="fixed bottom-6 right-6 hidden bg-white rounded-full border border-gray-400 p-3 shadow-lg z-40 hover:shadow-xl transition-shadow focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer" title="Kembali ke atas">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-600">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v16.5" />
+      </svg>
+    </button>
+
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       const burgerBtn = document.getElementById('burger-menu-toggle');
       const closeBtn = document.getElementById('close-menu');
       const modal = document.getElementById('mobile-menu');
       const navbar = document.getElementById('navbar');
+      const backToTopBtn = document.getElementById('back-to-top');
+      const heroSection = document.getElementById('hero');
 
       // Mobile menu
       if (burgerBtn) {
@@ -291,6 +299,28 @@
       modal.addEventListener('click', (e) => {
         if (e.target === modal) modal.close();
       });
+
+      // Back to top functionality
+      if (backToTopBtn && heroSection) {
+        const handleScroll = () => {
+          const rect = heroSection.getBoundingClientRect();
+          if (rect.bottom < 0) {
+            backToTopBtn.classList.remove('hidden');
+          } else {
+            backToTopBtn.classList.add('hidden');
+          }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
 
       // Smooth scroll for all anchor links
       const allLinks = document.querySelectorAll('a[href^="#"]');
